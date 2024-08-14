@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi Blog</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/font/flaticon.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+</head>
+<body>
+    <header>
+        <section class="header-icons-container">
+            <div class="icons">
+                <a href="/"><span class="flaticon-001-facebook"></span></a>
+                <a href="/"><span class="flaticon-002-twitter"></span></a>
+                <a href="/"><span class="flaticon-011-instagram"></span></a>
+                <a href="/"><span class="flaticon-010-linkedin"></span></a>
+                <a href="/"><span class="flaticon-008-youtube"></span></a>
+            </div>
+        </section>
+        <nav>
+            <section class="nav-logo-container">
+                <a href="/"><img src="assets/img/Logo-negro.png" alt="Logo de mi blog" > </a>
+            </section>
+            <section class="profile-link">
+                <a href="index.html">Inicio</a>
+                <a href="perfil.html">Sobre mí</a>
+                <a href="blogs.html">Mi blog</a>
+                <a href="contacto.html">Contacto</a>
+            </section>
+        </nav>
+    </header>
+        <h1>¿Hablamos..?</h1>
+        <section class="contact-page-container">
+            <article class="contact-page-left">
+                <div class="contact-page-info">
+                    <img src="assets/img/006-like.png" alt="mapa de sitio">
+                    <div class="contact-page-text">
+                        <h2>Aqui nos encontramos</h2>
+                        <p>C/Gran Via, 123, 48005 Bilbao, Bizkaia</p>
+                    </div>
+                </div>
+                <div class="contact-map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.0923885641055!2d-122.08424968469212!3d37.42206587982408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5a6ffef6df1%3A0x2b14b241c3e3965d!2sGoogleplex!5e0!3m2!1ses!2sus!4v1692431624897!5m2!1ses!2sus"
+                        width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+   
+            </article>
+            <article class="contact-page-right ">
+                <div class="contact-page-info">
+                    <img src="assets/img/013-newsletter.png" alt="formulario de contacto">
+                    <div class="contact-page-text">
+                        <h2>Formulario de contacto</h2>
+                        <p>Aqui estamos para lo que necesites.</p>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form action="enviar_formulario.php" method="POST">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+        
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+        
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                    
+            </article>
+        </section>
+  
+        <footer>
+            <p> © <strong>Kandula Web Desing</strong> - Todos los derechos reservados.</p>
+        </footer>
+</body>
+</html>
