@@ -165,7 +165,7 @@ nav .nav-link a:hover {
 .home-main-button {
     width: 250px;
     height: 50px;
-    margin:  0 auto;
+    margin:  30px auto;
     background-color:rgba(0, 0, 0, 0.438);
     border: 1px solid #48cfad;
     color: #48cfad;
@@ -175,11 +175,19 @@ nav .nav-link a:hover {
     line-height: 50px;
     border-radius: 5px;
     /* display: block; */
+    box-shadow: 0 0 10px #48cfad, /* Luz suave */
+   /* 0 0 10px #48cfad, /* Luz secundaria */
+    0 0 10px #48cfad, /* Luz más intensa */
+    0 0 40px #48cfad; /* Luz más intensa aún */
 }
 .home-main-button:hover {
     background: #48cfad;
     color: white;
     transform: scale(1.05);
+    box-shadow: 0 0 20px #48cfad, /* Luz más intensa al hacer hover */
+    0 0 30px #48cfad,
+    0 0 40px #48cfad,
+    0 0 10px #48cfad; 
 }
 /* ==============pagina blogs.html=====================  */
 .blogs-main {
