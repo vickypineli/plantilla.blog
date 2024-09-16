@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
-}
+} 
 a {
     text-decoration: none;
     display: inline;
@@ -13,7 +13,10 @@ a {
 h1{
     font-size: 50px;
     text-align: center;
+    padding: 0;
+    margin: 0px;
 }
+
 
 .home-body {
     position: fixed;
@@ -32,7 +35,7 @@ header {
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
-header .header-icons-container {
+header .header-icons-container{
     width: 100%;
     height: 50px;
     display: flex;
@@ -64,63 +67,90 @@ nav .nav-logo-container img {
     width: 220px;
     margin-top: 10px;
 }
-nav .profile-link {
+nav .hamburger-menu {
+    display: none;
+}
+nav .nav-link {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-right: 50px;
 }
-nav .profile-link a {
+nav .nav-link a {
     color: black;
     border-bottom: 1px solid black;
     margin: 0 5%;
     font-size: 20px;
 }
-nav .profile-link a:hover {
+nav .nav-link a:hover {
     border: none;
     color: #47cfac;
 }
 
+
 .home-main {
+    position: relative;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr;
+    height: 100vh;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background-image: url('../assets/img/Cover.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;
+    z-index: -1; /* Asegúrate de que el video esté detrás del contenido */
 }
-.home-main section {
+
+.home-main > section {
     display: grid;
-    grid-column: 2;
-    justify-items: center;
-    height: 750px;
-   
+    grid-column: 3;
+    padding: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0),  rgba(0, 0, 0, 0.685),rgb(0, 0, 0));
 }
-.home-main-text {
-    font-family: 'Roboto mono', monospace;
-    font-size: 60px;
-    font-weight: 700px;
+.home-main > section > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+.home-main-text-title {
+    font-size: 50px;
+    font-weight: 700;
     letter-spacing: 5px;
     text-align: center;
     color: white;
     text-transform: uppercase;
+    margin: 10px auto;
 }
+
 /* Estilos para animación tipo mecanografiado */
 .home-main-text-mechanic {
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden; /* Oculta el texto que aún no ha sido "escrito" */
-    border-right: .15em solid white; /* Crea el cursor de la máquina de escribir */
-    white-space: nowrap; /*  Evita que el texto salte a la siguiente línea */
-    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
-    font-size: 80px; /* Asegúrate de que coincida con el tamaño de fuente de tu h1 */
-    font-weight: 700; /* Igual al estilo actual del texto */
-    letter-spacing: 5px; /* Igual al estilo actual */
+    font-family: 'Roboto mono', monospace;
+    font-size: 20px;
+    letter-spacing: 2px;
     text-align: center;
     color: white;
-    text-transform: uppercase;
+    /* margin: 0 auto 100px ; */
+    padding: 0px 5px;
+    height: 30px;/* Asegúrate de que coincida con el tamaño de fuente de tu h1 */
+    overflow: hidden; /* Oculta el texto que aún no ha sido "escrito" */
+    border-right: 0.25em solid white; /* Crea el cursor de la máquina de escribir */
+    white-space: nowrap; /*  Evita que el texto salte a la siguiente línea */
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    font-size: 15px;/* Asegúrate de que coincida con el tamaño de fuente del texto */
+    font-weight: 700; /* Igual al estilo actual del texto */
+    letter-spacing: 2px; /* Igual al estilo actual */
+
+     
 }
+.home-main-text-static {
+    display: none;   
+}
+
 /* Animación de escritura */
 @keyframes typing {
     from { width: 0; }
@@ -135,18 +165,20 @@ nav .profile-link a:hover {
 .home-main-button {
     width: 250px;
     height: 50px;
-    background: #48cfad;
-    color: white;
+    margin:  0 auto;
+    background-color:rgba(0, 0, 0, 0.438);
+    border: 1px solid #48cfad;
+    color: #48cfad;
     text-align: center;
     font-weight: 700;
     font-size: 25px;
     line-height: 50px;
     border-radius: 5px;
+    /* display: block; */
 }
 .home-main-button:hover {
-    background-color:rgba(0, 0, 0, 0.438);
-    border: 1px solid #48cfad;
-    color: #48cfad;
+    background: #48cfad;
+    color: white;
     transform: scale(1.05);
 }
 /* ==============pagina blogs.html===================== */
