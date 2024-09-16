@@ -8,49 +8,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/font/flaticon.css">
     <link rel="stylesheet" href="css/media-queries.css">
+    <script src=/js/main.js></script>
 </head>
 <body>
-    <header>
-        <section class="header-icons-container">
-            <div class="icons">
-                <a href="/"><span class="flaticon-001-facebook"></span></a>
-                <a href="/"><span class="flaticon-002-twitter"></span></a>
-                <a href="/"><span class="flaticon-011-instagram"></span></a>
-                <a href="/"><span class="flaticon-010-linkedin"></span></a>
-                <a href="/"><span class="flaticon-008-youtube"></span></a>
-            </div>
-        </section>
-        <nav>
-            <section class="nav-logo-container">
-                <a href="/"><img src="assets/img/Logo-negro.png" alt="Logo de mi blog" > </a>
-            </section>
-            <section class="profile-link">
-                <a href="index.html">Inicio</a>
-                <a href="perfil.html">Sobre mí</a>
-                <a href="blogs.html">Mi blog</a>
-                <a href="contacto.html">Contacto</a>
-            </section>
-        </nav>
-    </header>
+    <div id="nav-placeholder"></div>
         <h1>¿Hablamos..?</h1>
         <section class="contact-page-container">
             <article class="contact-page-left">
-                <div class="contact-page-info">
-                    <img src="assets/img/006-like.png" alt="mapa de sitio">
-                    <div class="contact-page-text">
-                        <h2>Aqui nos encontramos</h2>
-                        <p>C/Gran Via, 123, 48005 Bilbao, Bizkaia</p>
-                    </div>
-                </div>
-                <div class="contact-map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.0923885641055!2d-122.08424968469212!3d37.42206587982408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5a6ffef6df1%3A0x2b14b241c3e3965d!2sGoogleplex!5e0!3m2!1ses!2sus!4v1692431624897!5m2!1ses!2sus"
-                        width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-   
-            </article>
-            <article class="contact-page-right ">
                 <div class="contact-page-info">
                     <img src="assets/img/013-newsletter.png" alt="formulario de contacto">
                     <div class="contact-page-text">
@@ -71,13 +35,26 @@
         
                         <button type="submit">Enviar</button>
                     </form>
+                </div> 
+            </article>
+            <article class="contact-page-right ">
+                <div class="contact-page-info">
+                    <img src="assets/img/006-like.png" alt="mapa de sitio">
+                    <div class="contact-page-text">
+                        <h2>Donde nos encontramos</h2>
+                        <p>C/Gran Via, 123, 48005 Bilbao, Bizkaia</p>
+                    </div>
                 </div>
-                    
+                <div class="contact-map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.547538077293!2d-2.9301361173340084!3d43.26090370636882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4fd823d06835%3A0x7d9e9c929b6fe09c!2sGran%20V%C3%ADa%20de%20Don%20Diego%20L%C3%B3pez%20de%20Haro%2C%20Abando%2C%20Bilbo%2C%20Bizkaia!5e0!3m2!1ses!2ses!4v1724934159109!5m2!1ses!2ses" 
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
             </article>
         </section>
-  
-        <footer>
-            <p> © <strong>Kandula Web Desing</strong> - Todos los derechos reservados.</p>
-        </footer>
+        <!-- Contenedor donde se cargará el footer -->
+        <div id="footer-placeholder"></div>
 </body>
 </html>
