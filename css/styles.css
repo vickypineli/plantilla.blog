@@ -181,7 +181,7 @@ nav .nav-link a:hover {
     color: white;
     transform: scale(1.05);
 }
-* ==============pagina blogs.html===================== */
+/* ==============pagina blogs.html=====================  */
 .blogs-main {
     display: grid;
 }
@@ -512,5 +512,196 @@ footer p {
 
     .map-container .map {
         height: 300px;
+    }
+}
+/* =============================Estilos para móvil============================= */
+/* Estilo para pantallas entre 769px y 1279px */
+@media (min-width: 769px) and (max-width: 1279px) {
+    nav {
+        display: grid;
+        grid-template-columns: 1fr 3fr; /* Ajusta las columnas */
+        align-items: center;
+     
+    }
+
+    nav .nav-logo-container {
+        margin-left: 20px;
+    }
+
+    nav .nav-logo-container img {
+        width: 180px; /* Tamaño reducido del logo */
+    }
+
+    nav .nav-link {
+        display: flex;
+        justify-content: flex-end; /* Espacio entre los enlaces */
+    
+    }
+
+    nav .nav-link a {
+        font-size: 18px; /* Tamaño de fuente ajustado */
+        text-align: center;
+    }
+
+    nav .nav-link a:hover {
+        color: #47cfac;
+        border-bottom: 2px solid #47cfac; /* Resalta el enlace seleccionado */
+    }
+}
+
+@media (min-width: 768px) {
+    .close-icon {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        grid-template-columns: 1fr auto;
+        height: auto;
+    }
+
+    nav .nav-logo-container {
+        margin-left: 20px;
+    }
+
+    nav .hamburger-menu {
+        display: block;
+        margin-right: 20px;
+        align-self: center;
+        color: white;
+        background-color: #47cfac;
+        padding: 20px;
+    }
+
+    nav .hamburger-menu .hamburger-icon,
+    nav .hamburger-menu .close-icon {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    nav .nav-link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: white;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 75%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+        transition: max-height 2.0s ease; /* Transición suave de la altura */
+        max-height: 0; 
+    }
+
+     nav .nav-link.active {
+        max-height: 500px; /* Ajusta según la altura de tu menú */
+    }
+    nav .nav-link .close-icon {
+        /* display: block; */
+        width: 100%;
+        align-self: flex-end;
+        font-size: 40px;
+        padding: 2px 10px;
+        cursor: pointer;
+        color: white;
+        background-color: #55555573;
+        text-align: right;
+    }
+
+    nav .nav-link a {
+        color: black;
+        padding: 15px 5px;
+        width: 90%;
+        /* box-sizing: border-box; */
+        border-bottom: none;
+        text-align: left;
+    }
+
+    nav .nav-link a:hover {
+    
+        background-color: #47cfac;
+        color: white;
+    }
+
+    /* Mostrar el menú cuando se hace clic en el icono de hamburguesa */
+    nav .hamburger-menu.active + .nav-link {
+        display: flex;
+    }
+    .hamburger-menu .close-icon {
+        display: none; /* Oculto por defecto */
+    }
+    
+    .nav-link.active ~ .hamburger-menu .hamburger-icon {
+        display: none; /* Ocultar el icono de hamburguesa cuando el menú está activo */
+    }
+    
+    .nav-link.active ~ .hamburger-menu .close-icon {
+        display: block; /* Mostrar el icono de cierre cuando el menú está activo */
+    }
+
+    /* ============================Estilos para pantallas pequeñas como móviles (menos de 768px de ancho) */
+    .home-main {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        height: 100vh;
+    }
+    .home-main > section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:rgba(0, 0, 0, 0.212);
+        z-index: 1;
+    }
+    #bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Asegúrate de que el video esté detrás del contenido */
+    }
+    .home-main > section > div {
+        width: 90%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        margin-bottom: 50px; /* Ajusta el margen inferior para que no sea tan grande en móviles */
+    }
+
+    .home-main-text-title {
+        font-size: 40px; /* Reduce el tamaño del título en móviles */
+    }
+   
+    .home-main-text-mechanic {
+        animation: none; /* Elimina la animación en pantallas móviles */
+        border-right: none; /* Elimina el cursor de la máquina de escribir */
+        white-space: normal; /* Permite saltos de línea */
+        height: auto;
+    }
+
+    .home-main-button {
+        width: 200px; /* Reduce el tamaño del botón */
+        font-size: 20px; /* Ajusta el tamaño del texto del botón */
+        line-height: 45px;
+    }
+
+
+    .contact-page-container {
+        flex-direction: column;
+    }
+    .contact-page-left,
+    .contact-page-right {
+        width: 90%;
+        margin: auto;
+        padding: 10px;;
     }
 }
